@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Identità Digitale</title>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Identità Digitale</h1>
+    <p>Educazione civica e cittadinanza digitale</p>
+</header>
+
+<!-- SEZIONE CARDS -->
+<div class="grid">
+
+    <div class="card" onclick="apri('intro')">Identità Digitale</div>
+    <div class="card" onclick="apri('agenda')">Agenda 2030</div>
+    <div class="card center" onclick="apri('digcomp')">DigComp</div>
+    <div class="card" onclick="apri('diritti')">Diritti Digitali</div>
+    <div class="card" onclick="apri('educazione')">Educazione Digitale</div>
+
+</div>
+
+<!-- CONTENUTI -->
+<div id="contenuto">
+
+    <div class="pagina" id="intro">
+        <h2>Identità Digitale</h2>
+        <p>L’identità digitale è l’insieme dei dati che permettono di identificare una persona nel mondo online. Comprende informazioni come email, password, account social e attività svolte su Internet. Ogni individuo può avere più identità digitali a seconda dei servizi utilizzati.</p>
+        <p>A differenza del mondo reale, dove l’identità è rappresentata da documenti fisici, nel digitale essa viene verificata attraverso sistemi tecnologici e credenziali di accesso. Sistemi come SPID e CIE permettono di accedere ai servizi pubblici in modo sicuro.</p>
+        <p>L’identità digitale è fondamentale per molte attività quotidiane: comunicare, acquistare online, studiare o lavorare. Tuttavia, è anche vulnerabile ai rischi come furti di dati e hackeraggi.</p>
+        <p>Per questo motivo è fondamentale proteggerla usando password sicure, autenticazione a due fattori e comportamenti responsabili.</p>
+    </div>
+
+    <div class="pagina" id="agenda">
+        <h2>Agenda 2030</h2>
+        <p>L’Agenda 2030 è un programma globale delle Nazioni Unite composto da 17 obiettivi di sviluppo sostenibile. Questi mirano a migliorare la qualità della vita e a costruire un futuro più equo.</p>
+        <p>L’identità digitale è collegata a diversi obiettivi. L’obiettivo 4 promuove l’istruzione, e grazie al digitale è possibile accedere a contenuti educativi ovunque.</p>
+        <p>L’obiettivo 9 riguarda l’innovazione e le infrastrutture tecnologiche, fondamentali per lo sviluppo digitale. L’obiettivo 16 promuove istituzioni più sicure e accesso all’identità legale.</p>
+        <p>Grazie alle tecnologie digitali, è possibile partecipare alla società in modo più attivo e consapevole.</p>
+    </div>
+
+    <div class="pagina" id="digcomp">
+        <h2>DigComp</h2>
+        <p>Il DigComp è il quadro europeo delle competenze digitali. Serve a definire le abilità necessarie per usare le tecnologie in modo efficace.</p>
+        <p>Le competenze sono divise in cinque aree: informazione, comunicazione, creazione di contenuti, sicurezza e problem solving.</p>
+        <p>L’area informazione riguarda la capacità di cercare e valutare dati online. La comunicazione riguarda l’uso dei social e delle tecnologie collaborative.</p>
+        <p>La sicurezza riguarda la protezione dei dati personali e la privacy. Il problem solving riguarda la capacità di risolvere problemi tecnici.</p>
+    </div>
+
+    <div class="pagina" id="diritti">
+        <h2>Diritti e Doveri Digitali</h2>
+        <p>Ogni cittadino digitale ha diritti fondamentali, come la protezione dei dati personali e l’accesso ai servizi online.</p>
+        <p>Allo stesso tempo esistono anche doveri: rispettare gli altri utenti, evitare comportamenti scorretti e non diffondere fake news.</p>
+        <p>È importante anche rispettare il copyright e utilizzare correttamente i contenuti presenti su Internet.</p>
+        <p>L’uso responsabile del digitale permette di creare un ambiente sicuro e rispettoso.</p>
+
+        <button onclick="consiglio()">Consiglio</button>
+        <p id="consiglio"></p>
+    </div>
+
+    <div class="pagina" id="educazione">
+        <h2>Educazione Digitale</h2>
+        <p>L’educazione digitale è fondamentale per utilizzare Internet in modo consapevole. I giovani utilizzano spesso le tecnologie senza conoscere i rischi.</p>
+        <p>La scuola ha un ruolo importante nell’insegnare competenze digitali e corretto utilizzo della rete.</p>
+        <p>È importante imparare a riconoscere fake news, proteggere i dati e komunikare correttamente online.</p>
+        <p>Un’educazione digitale efficace permette di sfruttare al meglio le opportunità del web.</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>Progetto Educazione Civica: Moretti - Ouertani - Greco</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
