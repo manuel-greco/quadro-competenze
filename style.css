@@ -12,60 +12,75 @@ body {
     line-height: 1.6;
 }
 
-/* ---- Configurazione Layout Hub (Index Grande) ---- */
+/* ---- Configurazione Layout Hub (Sfondo arricchito per valorizzare il Glassmorphism) ---- */
 .hub-body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: space-between;
     align-items: center;
-    background: radial-gradient(circle at center, #ffffff 0%, #eaeef3 100%);
+    /* Sfondo a gradiente scuro/vivido per far risaltare il vetro sfocato bianco */
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #2e1065 100%);
+    color: #ffffff;
 }
 
 .hub-header {
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 20px 10px 20px;
 }
 
 .hub-header h1 {
     font-size: 2.5rem;
-    color: #212a57;
+    color: #ffffff;
     margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .hub-header p {
-    color: #5a738e;
+    color: #94a3b8;
     max-width: 600px;
 }
 
+/* Allineamento verticale di Pentagono + Griglia di card */
 .hub-main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
+    max-width: 1200px;
     padding: 20px;
+    gap: 50px; /* Spazio tra il pentagono e la griglia di card */
 }
 
-/* Dimensione maggiorata per la Landing Page principale */
+@media (min-width: 950px) {
+    /* Su schermi grandi, li affianca elegantemente invece di metterli uno sotto l'altro */
+    .hub-main {
+        flex-direction: row;
+        gap: 60px;
+    }
+}
+
+/* Dimensione del pentagono */
 .pentagon-container.large-hub {
     width: 100%;
-    max-width: 550px;
+    max-width: 480px;
     height: auto;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.4));
 }
 
-/* ---- Elementi SVG e Animazioni Originali Richieste ---- */
+/* ---- Elementi SVG Originali Richiesti ---- */
 .spicchio {
     stroke: #ffffff;
     stroke-width: 8;
     stroke-linejoin: round;
     transition: all 0.2s ease-in-out;
-    cursor: pointer; /* Corretto l'errore ortografico di origine */
+    cursor: pointer;
 }
 
 .spicchio:hover {
     opacity: 0.85;
-    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.2));
 }
 
 .spicchio .badge-circle,
@@ -88,10 +103,75 @@ body {
     pointer-events: none;
 }
 
-/* ---- Struttura delle Pagine di Dettaglio (Area 1 - 5) ---- */
+/* ---- IL TUO CODICE: GRIGLIA E CARD IN STILE GLASSMORPHISM (INTEGRATO) ---- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea una struttura a 2 colonne stabili */
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* CARD GLASS */
+.card {
+    height: 140px; /* Ridotto leggermente da 200px per renderlo più armonico a fianco del pentagono */
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Supporto Safari */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none; /* Rimuove la sottolineatura del link */
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.center {
+    grid-column: span 2;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.alf-card:hover {
+    background: #dcb12d;
+}
+
+.com-card:hover {
+    background: #4a90e2;
+}
+
+.con-card:hover {
+    background: #f39c12;
+}
+
+.sic-card:hover {
+    background: #2ecc71;
+}
+
+.ris-card:hover {
+    background: #e74c3c;
+}
+
+/* ---- Struttura delle Pagine di Dettaglio Interno (Invariate) ---- */
 .content-body {
     padding: 0;
     background-color: #f8fafc;
+    color: #2c3e50;
 }
 
 .nav-top-bar {
@@ -110,11 +190,6 @@ body {
     align-items: center;
     gap: 8px;
     font-size: 0.95rem;
-    transition: opacity 0.2s;
-}
-
-.btn-back:hover {
-    opacity: 0.8;
 }
 
 .page-container {
@@ -127,7 +202,7 @@ body {
     background: #ffffff;
     border-radius: 12px;
     padding: 40px;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
     border-top: 8px solid #212a57;
 }
 
@@ -169,13 +244,6 @@ body {
     border-left: 4px solid #cbd5e1;
 }
 
-.competence-list li strong {
-    color: #1e293b;
-    display: block;
-    margin-bottom: 4px;
-}
-
-/* Box di Connessione Sostenibile */
 .agenda-box {
     margin-top: 35px;
     background: #fff8f8;
@@ -185,17 +253,9 @@ body {
     border-left: 5px solid #ef4444;
 }
 
-.agenda-box h3 {
-    color: #dc2626;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 .hub-footer {
-    padding: 20px;
+    padding: 30px 20px;
     font-size: 0.85rem;
-    color: #8892b0;
+    color: #64748b;
     text-align: center;
 }
