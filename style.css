@@ -1,91 +1,201 @@
-body {
+/* ---- Reset & Stili di Base ---- */
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    padding: 0;
+}
 
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
-    url("https://www.fortuneita.com/wp-content/uploads/2023/09/identita-digitale.jpg");
+body {
+    font-family: 'Segoe UI', system-ui, Helvetica, Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #2c3e50;
+    line-height: 1.6;
+}
 
-    background-size: cover;
-    background-position: center;
-
-    color: white;
+/* ---- Configurazione Layout Hub (Index Grande) ---- */
+.hub-body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    background: radial-gradient(circle at center, #ffffff 0%, #eaeef3 100%);
 }
 
-/* HEADER */
-header {
+.hub-header {
     text-align: center;
-    padding: 40px;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
+    padding: 40px 20px;
 }
 
-header h1 {
-    margin: 0;
+.hub-header h1 {
     font-size: 2.5rem;
+    color: #212a57;
+    margin-bottom: 10px;
 }
 
-header p {
-    margin-top: 10px;
-    font-weight: 300;
+.hub-header p {
+    color: #5a738e;
+    max-width: 600px;
 }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    width: 80%;
-    margin: 50px auto;
+.hub-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
 }
 
-/* CARD GLASS */
-.card {
-    height: 200px;
-    background: rgba(255,255,255,0.18);
-    backdrop-filter: blur(12px);
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.25);
+/* Dimensione maggiorata per la Landing Page principale */
+.pentagon-container.large-hub {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
 
+/* ---- Elementi SVG e Animazioni Originali Richieste ---- */
+.spicchio {
+    stroke: #ffffff;
+    stroke-width: 8;
+    stroke-linejoin: round;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer; /* Corretto l'errore ortografico di origine */
+}
+
+.spicchio:hover {
+    opacity: 0.85;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.3));
+}
+
+.spicchio .badge-circle,
+.spicchio .badge-text {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.spicchio:hover .badge-circle,
+.spicchio:hover .badge-text {
+    opacity: 1;
+}
+
+.badge-text {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    fill: #ffffff;
+    text-anchor: middle;
+    dominant-baseline: central;
+    pointer-events: none;
+}
+
+/* ---- Struttura delle Pagine di Dettaglio (Area 1 - 5) ---- */
+.content-body {
+    padding: 0;
+    background-color: #f8fafc;
+}
+
+.nav-top-bar {
+    background-color: #212a57;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-back {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.btn-back:hover {
+    opacity: 0.8;
+}
+
+.page-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.area-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+    border-top: 8px solid #212a57;
+}
+
+.area-1-theme { border-top-color: #dcb12d; }
+.area-2-theme { border-top-color: #4a90e2; }
+.area-3-theme { border-top-color: #f39c12; }
+.area-4-theme { border-top-color: #2ecc71; }
+.area-5-theme { border-top-color: #e74c3c; }
+
+.area-title-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.area-num {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.4s;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-.center {
-    grid-column: span 2;
+.competence-list {
+    margin: 25px 0;
+    list-style: none;
 }
 
-.card:hover {
-    transform: scale(1.08);
-    background: rgba(255,255,255,0.25);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+.competence-list li {
+    background: #f1f5f9;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border-left: 4px solid #cbd5e1;
 }
 
-/* CONTENUTO */
-.pagina {
-    display: none;
-    width: 70%;
-    margin: 40px auto;
-    padding: 30px;
-
-    background: rgba(0,0,0,0.45);
-    backdrop-filter: blur(8px);
-
-    border-radius: 20px;
-    line-height: 1.8;
+.competence-list li strong {
+    color: #1e293b;
+    display: block;
+    margin-bottom: 4px;
 }
 
-/* FOOTER */
-footer {
-    margin-top: auto;
+/* Box di Connessione Sostenibile */
+.agenda-box {
+    margin-top: 35px;
+    background: #fff8f8;
+    border: 1px solid #fee2e2;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #ef4444;
+}
+
+.agenda-box h3 {
+    color: #dc2626;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hub-footer {
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #8892b0;
     text-align: center;
-    padding: 15px;
-    background: rgba(0,0,0,0.8);
 }
