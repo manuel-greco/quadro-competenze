@@ -259,3 +259,9 @@ body {
     color: #64748b;
     text-align: center;
 }
+
+/* logo */
+img {
+    height: 40px;
+    width: 50px;
+}
