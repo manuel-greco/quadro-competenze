@@ -33,7 +33,7 @@ body {
     font-size: 2.5rem;
     color: #ffffff;
     margin-bottom: 10px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hub-header p {
@@ -50,10 +50,12 @@ body {
     width: 100%;
     max-width: 1200px;
     padding: 20px;
-    gap: 50px; /* Spazio tra il pentagono e la griglia di card */
+    gap: 50px;
+    /* Spazio tra il pentagono e la griglia di card */
 }
 
 @media (min-width: 950px) {
+
     /* Su schermi grandi, li affianca elegantemente invece di metterli uno sotto l'altro */
     .hub-main {
         flex-direction: row;
@@ -106,7 +108,8 @@ body {
 /* ---- IL TUO CODICE: GRIGLIA E CARD IN STILE GLASSMORPHISM (INTEGRATO) ---- */
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Crea una struttura a 2 colonne stabili */
+    grid-template-columns: repeat(2, 1fr);
+    /* Crea una struttura a 2 colonne stabili */
     gap: 20px;
     max-width: 500px;
     width: 100%;
@@ -114,10 +117,12 @@ body {
 
 /* CARD GLASS */
 .card {
-    height: 140px; /* Ridotto leggermente da 200px per renderlo più armonico a fianco del pentagono */
+    height: 140px;
+    /* Ridotto leggermente da 200px per renderlo più armonico a fianco del pentagono */
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); /* Supporto Safari */
+    -webkit-backdrop-filter: blur(12px);
+    /* Supporto Safari */
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.25);
 
@@ -128,7 +133,8 @@ body {
     font-size: 18px;
     font-weight: 600;
     color: #ffffff;
-    text-decoration: none; /* Rimuove la sottolineatura del link */
+    text-decoration: none;
+    /* Rimuove la sottolineatura del link */
     text-align: center;
     padding: 15px;
     cursor: pointer;
@@ -202,15 +208,29 @@ body {
     background: #ffffff;
     border-radius: 12px;
     padding: 40px;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     border-top: 8px solid #212a57;
 }
 
-.area-1-theme { border-top-color: #dcb12d; }
-.area-2-theme { border-top-color: #4a90e2; }
-.area-3-theme { border-top-color: #f39c12; }
-.area-4-theme { border-top-color: #2ecc71; }
-.area-5-theme { border-top-color: #e74c3c; }
+.area-1-theme {
+    border-top-color: #dcb12d;
+}
+
+.area-2-theme {
+    border-top-color: #4a90e2;
+}
+
+.area-3-theme {
+    border-top-color: #f39c12;
+}
+
+.area-4-theme {
+    border-top-color: #2ecc71;
+}
+
+.area-5-theme {
+    border-top-color: #e74c3c;
+}
 
 .area-title-group {
     display: flex;
@@ -263,5 +283,5 @@ body {
 /* logo */
 img {
     height: 40px;
-    width: 50px;
+    width: 45px;
 }
