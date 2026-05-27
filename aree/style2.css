@@ -1,0 +1,342 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================= */
+/* BODY + SFONDO */
+/* ========================= */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    color: #1e293b;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* GLOW LATERALE */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(90px);
+    opacity: 0.25;
+}
+
+body::before {
+    left: -10%;
+}
+
+body::after {
+    right: -10%;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+.nav-top-bar {
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-back {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.btn-back:hover {
+    opacity: 0.8;
+}
+
+/* ========================= */
+/* CONTENUTO */
+/* ========================= */
+.page-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================= */
+/* CARD PRINCIPALE */
+/* ========================= */
+.area-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-top: 8px solid;
+    transition: transform 0.3s ease;
+}
+
+.area-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ========================= */
+/* TITOLI */
+/* ========================= */
+.area-title-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.area-num {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #1e293b;
+}
+
+/* ========================= */
+/* TESTO */
+/* ========================= */
+p {
+    margin-bottom: 15px;
+    color: #334155;
+}
+
+/* ========================= */
+/* LISTA */
+/* ========================= */
+.competence-list {
+    margin-top: 25px;
+    list-style: none;
+}
+
+.competence-list li {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid;
+    transition: all 0.25s ease;
+}
+
+.competence-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.competence-list strong {
+    font-size: 1.15rem;
+    color: #1e293b;
+}
+
+/* SOTTO LISTA */
+.competence-list ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.competence-list ul li {
+    margin-bottom: 8px;
+    list-style: disc;
+    color: #475569;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+
+/* ========================= */
+/* AGENDA BOX */
+/* ========================= */
+.agenda-box {
+    margin-top: 40px;
+    padding: 25px;
+    border-radius: 12px;
+    background: #f8fafc;
+    border-left: 6px solid;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* ========================= */
+/* COLORI + HEADER + SFONDO */
+/* ========================= */
+
+/* -------- AREA 1 (GIALLO) -------- */
+body.area-1-theme .nav-top-bar {
+    background: linear-gradient(90deg, #eab308, #ffe168);
+}
+
+body.area-1-theme::before,
+body.area-1-theme::after {
+    background: radial-gradient(circle, #facc15, transparent 70%);
+}
+
+.area-1-theme {
+    border-top-color: #facc15;
+}
+
+.area-1-theme .competence-list li {
+    border-left-color: #facc15;
+}
+
+.area-1-theme .area-num {
+    background-color: #facc15;
+}
+
+.area-1-theme .agenda-box {
+    border-left-color: #facc15;
+}
+
+/* -------- AREA 2 (BLU) -------- */
+body.area-2-theme .nav-top-bar {
+    background: linear-gradient(90deg, #1d4ed8, #5995f7);
+}
+
+body.area-2-theme::before,
+body.area-2-theme::after {
+    background: radial-gradient(circle, #3b82f6, transparent 70%);
+}
+
+.area-2-theme {
+    border-top-color: #3b82f6;
+}
+
+.area-2-theme .competence-list li {
+    border-left-color: #3b82f6;
+}
+
+.area-2-theme .area-num {
+    background-color: #3b82f6;
+}
+
+.area-2-theme .agenda-box {
+    border-left-color: #3b82f6;
+}
+
+/* -------- AREA 3 (ARANCIONE) -------- */
+body.area-3-theme .nav-top-bar {
+    background: linear-gradient(90deg, #ea580c, #ffae2c);
+}
+
+body.area-3-theme::before,
+body.area-3-theme::after {
+    background: radial-gradient(circle, #f97316, transparent 70%);
+}
+
+.area-3-theme {
+    border-top-color: #f39c12;
+}
+
+.area-3-theme .competence-list li {
+    border-left-color: #f39c12;
+}
+
+.area-3-theme .area-num {
+    background-color: #f39c12;
+}
+
+.area-3-theme .agenda-box {
+    border-left-color: #f39c12;
+}
+
+/* -------- AREA 4 (VERDE) -------- */
+body.area-4-theme .nav-top-bar {
+    background: linear-gradient(90deg, #16a34a, #5fff99);
+}
+
+body.area-4-theme::before,
+body.area-4-theme::after {
+    background: radial-gradient(circle, #22c55e, transparent 70%);
+}
+
+.area-4-theme {
+    border-top-color: #22c55e;
+}
+
+.area-4-theme .competence-list li {
+    border-left-color: #22c55e;
+}
+
+.area-4-theme .area-num {
+    background-color: #22c55e;
+}
+
+.area-4-theme .agenda-box {
+    border-left-color: #22c55e;
+}
+
+/* -------- AREA 5 (ROSSO) -------- */
+body.area-5-theme .nav-top-bar {
+    background: linear-gradient(90deg, #dc2626, #ff7575);
+}
+
+body.area-5-theme::before,
+body.area-5-theme::after {
+    background: radial-gradient(circle, #ef4444, transparent 70%);
+}
+
+.area-5-theme {
+    border-top-color: #ef4444;
+}
+
+.area-5-theme .competence-list li {
+    border-left-color: #ef4444;
+}
+
+.area-5-theme .area-num {
+    background-color: #ef4444;
+}
+
+.area-5-theme .agenda-box {
+    border-left-color: #ef4444;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+@media (max-width: 600px) {
+
+    .area-card {
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+}
+
+/* logo */
+img {
+    height: 40px;
+    width: 45px;
+}
